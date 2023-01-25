@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  r_studio_docker_compose:
+    #image: deseq2:1.3
+    image: kanomble/deseq2:1.3
+    environment:
+      - PASSWORD=****
+      - ADD=shiny
+    volumes:
+      - .:/home/rstudio
+    ports:
+      - "8787:8787"
+      - "3838:3838"
